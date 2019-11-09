@@ -1,0 +1,23 @@
+/* 
+   Github API calls get passed to this file.
+*/
+
+console.log(`--------------------------------------------------------------------------------`);
+console.log(`questions.js loaded.`);
+console.log(`--------------------------------------------------------------------------------`);
+
+$( document ).ready(function() {
+console.log(`app.js ready!`);
+
+/* ----- Code Start ----- */
+
+
+
+
+
+
+/* ------ Code End ------ */
+
+});
+console.log(`loading...`);
+
