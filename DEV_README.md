@@ -60,12 +60,16 @@ Users will be warned not to store valueble data in the text fields and any sensi
 * Schema
    * Example schema layout
 
-| ID     | user email    | password  | pin |
-| ------ |:-------------:| :-----:| :-----:|
-| 1      | right-aligned | thisisapassword1 | 0000 |
-| 2      | centered      |   thisisalsowapassword4 | 5421 |
-| 3      | are neat      |    rick&morty4life | 8656 |
+| ID     | userId from other table    | password  | pin |
+| ------ |:-------------:| :-----------:| :-----------:|
+| 1      | id number  7 | null | 2424 |
+| 2      | id number  5     |   thisisalsowapassword4 | 5421 |
+| 3      | id number  99     |    rick&morty4life | 8656 |
 
+
+| ID     | user email    | picture:url | Name | phone number | address | linkedin | github | opening statment | quote | job 1 skills | job 1 start | job 1 end | job 1 title | job 1 description | company name | job 2 skills | job 2 start | job 2 end | job 2 title | job 2 description | job 2 company name | job 3 skills | job 3 start | job 3 end | job 3 title | job 3 description | job 3 company name | edu | highest level | school 1 name | school 1 grad date | field of study | skills | skill 1 name| skill 2 name | skill 3 name | skill 4 name | skill 5 name | refrence 1 name | refrence 1 number | refrence 1 email |refrence relationship info | refrence 2 name | refrence 2 number | refrence 2 email | refrence 2 info | project 1 name | project 1 info | project 1:url | project 2 name | project 2 info | project 2:url | project 3 name | project 3 info | project 3: url | qr:url
+| ----------- |:-------------:|:-------------:|:----------:| :-----------:| :----------:| :------------:| :-----------:| :-----------:|:----------------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:| :-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| 1      | right-aligned | thisisapassword1 | 0000 |
 
 ## SCSS
 
