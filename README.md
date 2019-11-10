@@ -2,7 +2,7 @@
  
 *Collaborators:*  *Gishy,*  *John,*  *Diana,*  *Matthew* 
  
-See the published site [here](heroku.com) 
+See the published site [here](https://polar-headland-36196.herokuapp.com/) hosted by Heroku!
  
 ## About 
  
