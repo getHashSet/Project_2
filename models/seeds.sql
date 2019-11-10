@@ -1,2 +1,2 @@
-INSERT INTO user_info (id, user_email, picture_url, full_name, phone_number, user_address, linked_in, github, opening_statement, quote, job1_skills, job1_start, job1_end, job1_title, job1_description, )
-VALUES (value1, value2, value3, ...);
+INSERT INTO user_info
+values("")
