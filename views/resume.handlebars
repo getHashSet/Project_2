@@ -1,14 +1,56 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h2>Resume</h2>
-        <button class="home-btn">Home</button>
-    
-      </div>
+<div class="site_container res_">
+
+  <div class="nav_top">
+    <div class="nav_left">
+      <h1>Resume</h1>
+    </div>
+    <div class="nav_right">
+      <a class="home-btn"><ion-icon name="ios-home"></ion-icon></a>
     </div>
   </div>
-</div>
 
+  <div class="edit_menu">
+    <div class="min_max">
+      <ion-icon class="drop_menu" name="ios-arrow-down"></ion-icon>
+    </div>
+    <div class="menu_title">
+      <p>
+        title to this section
+      </p>
+    </div>
+  </div>
+
+</div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+
+<script>
+  // inline script for testing only. please add to resume.js when complete.
+
+let menuVisible = true;
+
+// click minimize menu button on the menu.
+  $(".min_max").click(function(){
+
+    if (menuVisible){
+      // have the menu slide to -90Y 
+      $(".edit_menu").attr("style", "transform: translate(-50%, 90%);");
+
+      // rotate ion icon 180 deg on the X
+      $(".drop_menu").attr("style", "transform: rotate(180deg);");
+
+      // toggle menuVisible variable
+      menuVisible = !menuVisible;
+    } else {
+      // menu slide back to -50%, 0
+      $(".edit_menu").attr("style", "transform: translate(-50%, 0);");
+
+      // remove rotate
+      $(".drop_menu").attr("style", "transform: rotate(0deg);");
+
+      // toggle menuVisible variable
+      menuVisible = !menuVisible;
+    };
+
+  });
+</script>

@@ -1,0 +1,188 @@
+// NextStepResume(c)
+
+// reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+////////////////////////////////////
+// import
+////////////////////////////////////
+
+// import variables from _var.scss files
+@import "_var";
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,700,900&display=swap");
+
+////////////////////////////////////
+// Global 
+////////////////////////////////////
+
+html,
+body {
+	
+	font-family: $mainFont, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+
+}
+
+p,
+ion-icons {
+	
+	color: $fontColor;
+
+}
+
+.site_container {
+
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: auto;
+
+}
+
+.nav_top {
+
+	position: sticky;
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	font-size: 1em;
+	padding: 1em;
+	z-index: 10;
+
+	.nav_left {
+		width: 50%;
+	}
+
+	.nav_right {
+		width: 50%;
+		text-align: right;
+	}
+
+}
+
+
+////////////////////////////////////
+// res_       *Resume Page Only* 
+////////////////////////////////////
+
+.res_ {
+
+	// this would affect only the Resume page container.
+
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+
+	.nav_top {
+		position: absolute;
+		top: 0;
+		max-width: 1200px;
+	}
+
+}
+
+.edit_menu {
+
+	position: fixed;
+	display: flex;
+	flex-wrap: nowrap;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	min-height: 256px;
+	padding: 2em;
+	border-radius: 1em;
+	color: $snow;
+	background-color: $dark;
+	margin: 1em auto;
+	transition: transform 1s;
+	
+	.min_max {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 2em;
+		margin: .25em .5em;
+		transition: transform .3s;
+
+		.drop_menu {
+			transition: transform .8s;
+		}
+
+	}
+
+	.min_max:hover {
+		transform: translateY(3px);
+		transition: transform .3s;
+	}
+
+	.menu_title {
+
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 1em;
+
+		p {
+			font-family: $mainFont;
+			font-size: 1em;
+			font-weight: 700;
+			color: snow;
+			text-transform: uppercase;
+		}
+
+	}
+
+}
+
