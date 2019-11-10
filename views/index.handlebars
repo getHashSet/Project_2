@@ -4,11 +4,38 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>Login Page!</h2>
-        <button type="button" class="btn" id="question-btn">Questions</button>
-        <button type="button" class="btn" id="resume-btn">Resume</button>
+        
       </div>
     </div>
   </div>
+</div>
+
+<div class="container">
+  <form name="signin" action="" method="post" onsubmit="return login.onSubmit()">
+    
+    <div class="textfield-wrapper">
+      <label for="user" class="float">Username</label>
+      <input id="user" name="user" type="text" placeholder="Username" value="" >
+    </div>
+
+    <div class="textfield-wrapper">
+      <label for="passwd" class="float accessibly-hidden">Passcode</label>
+      <input id="passwd" name="passwd" type="password" placeholder="Password" maxlength="4">
+    </div>
+
+    <button type="button" class="question-btn" id="guest-btn">Guest</button>
+    <button type="button" class="question-btn" id="sign-up-btn">Sign up</button>
+    <button type="button" class="btn" id="resume-btn">Log In</button>
+
+    <ul>
+
+      <li id="forgot-username-password-item">Forgot <a href="" target="_self" title="Lookup User ID">username</a> or <a
+          id="forgotPwdLink" href="" target="_self" title="Reset Password">password</a>?</li>
+
+      <li id="create-username-item">Don't have a username? <span><a href="" target="_self">Create one</a></span>
+      </li>
+    </ul>
+  </form>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
