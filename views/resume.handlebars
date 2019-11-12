@@ -2,22 +2,39 @@
 
   <div class="nav_top">
     <div class="nav_left">
-      <h1>Resume</h1>
+      <h1><ion-icon id="logo_icon" name="paper-plane"></ion-icon> &MediumSpace; Next Step Resume</h1>
     </div>
     <div class="nav_right">
       <a class="home-btn"><ion-icon name="ios-home"></ion-icon></a>
     </div>
   </div>
 
+  <section class="resume_section">
+    <div class="arrow_left"><span>&lt;</span></div>
+    <div class="resume_frame">
+      <!-- resume build goes here -->
+    </div>
+    <div class="arrow_right"><span>&gt;</span></div>
+  </section>
+
   <div class="edit_menu">
     <div class="min_max">
       <ion-icon class="drop_menu" name="ios-arrow-down"></ion-icon>
     </div>
+
     <div class="menu_title">
       <p>
-        title to this section
+        <ion-icon name="ios-construct" style="transform: translateY(2px);"></ion-icon>
+        toolbox
       </p>
     </div>
+
+    <div class="tools">
+      <ion-icon name="ios-download"></ion-icon>
+      <ion-icon name="ios-mail"></ion-icon>
+      <ion-icon name="ios-save"></ion-icon>
+    </div>
+
   </div>
 
 </div>
@@ -27,30 +44,54 @@
 <script>
   // inline script for testing only. please add to resume.js when complete.
 
-let menuVisible = true;
+let menuHidden = true;
 
 // click minimize menu button on the menu.
-  $(".min_max").click(function(){
+$(".min_max").click(function(){
 
-    if (menuVisible){
-      // have the menu slide to -90Y 
-      $(".edit_menu").attr("style", "transform: translate(-50%, 90%);");
+  if (menuHidden){
+    // have the menu slide to -90Y 
+    $(".edit_menu").attr("style", "transform: translate(-50%, 0);");
 
-      // rotate ion icon 180 deg on the X
-      $(".drop_menu").attr("style", "transform: rotate(180deg);");
+    // rotate ion icon 180 deg on the X
+    $(".drop_menu").attr("style", "transform: rotate(0deg);");
 
-      // toggle menuVisible variable
-      menuVisible = !menuVisible;
-    } else {
-      // menu slide back to -50%, 0
-      $(".edit_menu").attr("style", "transform: translate(-50%, 0);");
+    // toggle menuHidden variable
+    menuHidden = !menuHidden;
+  } else {
+    // menu slide back to -50%, 0
+    $(".edit_menu").attr("style", "transform: translate(-50%, 90%);");
 
-      // remove rotate
-      $(".drop_menu").attr("style", "transform: rotate(0deg);");
+    // remove rotate
+    $(".drop_menu").attr("style", "transform: rotate(180deg);");
 
-      // toggle menuVisible variable
-      menuVisible = !menuVisible;
-    };
+    // toggle menuHidden variable
+    menuHidden = !menuHidden;
+  };
 
-  });
+});
+
+$( document ).ready(function() {
+console.log(`app.js ready!`);
+/* ----- Code Start ----- */
+
+//logo icon animation
+let logoAnimate = setInterval(function(){
+
+  $("#logo_icon").attr("style", "transform: scale(1.4)");
+
+  let frame2 = setInterval(function(){
+    $("#logo_icon").attr("style", "transform: scale(1) translateY(.2em);");
+    clearInterval(frame2);
+  }, 600)
+
+  clearInterval(logoAnimate);
+}, 500);
+ 
+
+/* ------ Code End ------ */
+});
+console.log(`loading...`);
+
+
 </script>

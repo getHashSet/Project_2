@@ -88,8 +88,6 @@ ion-icons {
 
 .nav_top {
 
-	position: sticky;
-	top: 0;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -99,14 +97,36 @@ ion-icons {
 	z-index: 10;
 
 	.nav_left {
-		width: 50%;
+
+		width: 70%;
+
+		h1 {
+			font-weight: 700;
+
+			ion-icon {
+				cursor: pointer;
+				font-size: 1.5em;
+				transform: translateY(.2em);
+			}
+		}
 	}
 
 	.nav_right {
-		width: 50%;
+		width: 30%;
 		text-align: right;
+
+		a {
+			cursor: pointer;
+			ion-icon {
+				font-size: 1.5em;
+			}
+		}
 	}
 
+}
+
+#logo_icon {
+	transition: transform .6s;
 }
 
 
@@ -121,11 +141,16 @@ ion-icons {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	justify-items: center;
+	min-height: 80vh;
 
 	.nav_top {
 		position: absolute;
 		top: 0;
 		max-width: 1200px;
+		background-color: #fff;
+		border-bottom: 1px solid $dark;
 	}
 
 }
@@ -137,8 +162,9 @@ ion-icons {
 	flex-wrap: nowrap;
 	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, 90%);
 	width: 90%;
+	max-width: 1200px;
 	min-height: 256px;
 	padding: 2em;
 	border-radius: 1em;
@@ -156,13 +182,15 @@ ion-icons {
 		transition: transform .3s;
 
 		.drop_menu {
+			transform: rotate(180deg);
 			transition: transform .8s;
 		}
 
 	}
 
 	.min_max:hover {
-		transform: translateY(3px);
+		cursor: pointer;
+		transform: translateY(-3px);
 		transition: transform .3s;
 	}
 
@@ -175,14 +203,89 @@ ion-icons {
 		margin: 1em;
 
 		p {
+			user-select: none;
+			margin-left: 1.5em;
 			font-family: $mainFont;
 			font-size: 1em;
 			font-weight: 700;
-			color: snow;
+			color: $snow;
 			text-transform: uppercase;
 		}
 
 	}
 
+	.tools {
+
+		display: flex;
+		flex-wrap: wrap;
+		min-width: 64px;
+		justify-content: start;
+		
+		ion-icon {
+			margin: .5em .2em .2em .2em;
+			font-size: 2em;
+			border: 1px solid $snow;
+			padding: 3px;
+			border-radius: 20%;
+			background-color: $highlightDark;
+		}
+
+		ion-icon:hover {
+			cursor: pointer;
+			transform: translateY(-1px);
+			transition: transform .1s;
+		}
+
+		ion-icon:active {
+			transform: translateY(3px);
+		}
+	}
+
 }
 
+.resume_section {
+
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+
+	.resume_frame {
+		min-width: 400px;
+		min-height: 550px;
+		border: 1px solid $dark;
+	}
+
+	.arrow_left,
+	.arrow_right {
+		user-select: none;
+		margin: 1em;
+		transform: translateY(50%);
+		font-weight: 200;
+		border-radius: 50%;
+		font-size: 4em;
+		transition: transform .3s;
+
+		span{
+			cursor: pointer;
+		}
+	}
+
+	.arrow_left:hover {
+		transform: translate(-5px, 50%);
+	}
+
+	.arrow_right:hover {
+		transform: translate(5px, 50%);
+	}
+
+	.arrow_right:active {
+		transform: translate(5px, 52%);
+	}
+
+	.arrow_left:active {
+		transform: translate(-5px, 52%);
+	}
+
+}
