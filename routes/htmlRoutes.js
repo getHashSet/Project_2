@@ -30,6 +30,18 @@ module.exports = function(app) {
     res.render("resume");
   });
 
+  app.get("/resume1", function(req, res) {
+    res.render("resume1");
+  });
+
+  app.get("/resume2", function(req, res) {
+    res.render("resume2");
+  });
+
+  app.get("/resume3", function(req, res) {
+    res.render("resume3");
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

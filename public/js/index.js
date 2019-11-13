@@ -6,6 +6,7 @@
 var $questionBtn = $(".question-btn");
 var $resumeBtn = $("#resume-btn");
 var $homeBtn = $(".home-btn");
+var $saveBtn = $("#save");
 
 // // The API object contains methods for each kind of request we'll make
 // var API = {
@@ -117,9 +118,29 @@ var homeBtnClick = function() {
   window.location = "/";
 };
 
+function saveBtnClick() {
+  console.log("saved!");
+  var doc = new jsPDF();
+
+  var specialElementHandlers = {
+    "#editor": function(element, renderer) {
+      return true;
+    }
+  };
+
+  $("#save").click(function() {
+    doc.fromHTML($("#content").html(), 15, 15, {
+      width: 170,
+      elementHandlers: specialElementHandlers
+    });
+    doc.save("sample-file.pdf");
+  });
+}
+
 // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 $questionBtn.on("click", questionsBtnClick);
 $resumeBtn.on("click", resumeBtnClick);
 $homeBtn.on("click", homeBtnClick);
+$saveBtn.on("click", saveBtnClick);
