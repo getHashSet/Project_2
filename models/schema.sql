@@ -12,6 +12,7 @@ CREATE TABLE user_table (
 
 CREATE TABLE user_info (
     id int NOT NULL AUTO_INCREMENT,
+    user_name varchar(500),
     user_email varchar(50),
     picture_url varchar(500),
     full_name varchar(50),
