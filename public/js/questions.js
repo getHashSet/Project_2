@@ -4,13 +4,32 @@
 
 console.log(`--------------------------------------------------------------------------------`);
 console.log(`questions.js loaded.`);
-console.log(`--------------------------------------------------------------------------------`);
+console.log(`--------------------------------------------s------------------------------------`);
 
 $( document ).ready(function() {
 console.log(`app.js ready!`);
 
 /* ----- Code Start ----- */
+const user_data={};
 
+
+document.addEventListener("keyup", function(event){
+
+    if(event.keyCode == 9){
+        //console.log("first name: " + $("#first_name").val());
+        if ($("#first_name").val() != ""){
+            user_data.first_name = $("#first_name").val();
+            console.log(user_data.first_name);
+        }
+        if ($("#last_name").val() != ""){
+            user_data.last_name = $("#last_name").val();
+            console.log(user_data.last_name);
+        }
+    }
+});
+
+
+/*
 let collectUserData = {
     user_email:"matthew_carpenter@icloud.com",
     picture_url: "https://avatars1.githubusercontent.com/u/53285976?s=460&v=4",
@@ -82,6 +101,7 @@ let collectUserData = {
     //project_img_url_3: DataTypes.STRING,
     //qr_url: DataTypes.STRING,
 };
+*/
 
 // test to see if we can post the object
 $(".big_red_button").click(function(){
