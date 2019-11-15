@@ -3,10 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Example.findAll({}).then(function(dbUserData) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        examples: dbUserData
       });
     });
   });
@@ -40,6 +40,17 @@ module.exports = function(app) {
 
   app.get("/resume3", function(req, res) {
     res.render("resume3");
+    
+  app.get("/business", function(req, res) {
+    res.render("businessCards");
+  });
+
+  app.get("/apiStuffs", function(req, res) {
+    res.render("apiStuffs");
+  });
+
+  app.get("/end", function(req, res) {
+    res.render("end");
   });
 
   // Render 404 page for any unmatched routes
