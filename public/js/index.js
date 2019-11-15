@@ -7,7 +7,7 @@ var $questionBtn = $(".question-btn");
 var $resumeBtn = $("#resume-btn");
 var $homeBtn = $(".home-btn");
 var $saveBtn = $("#save");
-
+const userLogins = {};
 // // The API object contains methods for each kind of request we'll make
 // var API = {
 //   saveExample: function(example) {
@@ -109,7 +109,15 @@ var questionsBtnClick = function() {
 var resumeBtnClick = function() {
   event.preventDefault();
   // console.log("resume");
-  window.location = "/resume";
+  userLogins.user_email = $("#user").val();
+  userLogins.password = $("#passwd").val();
+  $.ajax({
+    url: "/user_login",
+    method: "POST",
+    data: userLogins
+  }).then(function(data) {
+    window.location = "/resume";
+  });
 };
 
 var homeBtnClick = function() {
