@@ -2,17 +2,24 @@
 
   <div class="nav_top">
     <div class="nav_left">
-      <h1><ion-icon id="logo_icon" name="paper-plane"></ion-icon> &MediumSpace; Next Step Resume</h1>
+      <h1>
+        <ion-icon id="logo_icon" name="paper-plane"></ion-icon> &MediumSpace; Next Step Resume
+      </h1>
     </div>
     <div class="nav_right">
-      <a class="home-btn"><ion-icon name="ios-home"></ion-icon></a>
+      <a class="home-btn">
+        <ion-icon name="ios-home"></ion-icon>
+      </a>
     </div>
   </div>
 
-  <section class="resume_section">
+  <section class="resume_section" id="resume-content">
     <div class="arrow_left"><span>&lt;</span></div>
     <div class="resume_frame">
       <!-- resume build goes here -->
+      <h1 id="name-test" style="color: blue;"> Diana Gerardo</h1>
+      <h1 id="name-test" style="color: blue;"> Diana Gerardo</h1>
+      <h1 id="name-test" style="color: blue;"> Diana Gerardo</h1>
     </div>
     <div class="arrow_right"><span>&gt;</span></div>
   </section>
@@ -30,6 +37,7 @@
     </div>
 
     <div class="tools">
+      {{!-- <canvas id="canvas" width="480" height="320"></canvas> --}}
       <ion-icon name="ios-download" id="download"></ion-icon>
       <ion-icon name="ios-mail"></ion-icon>
       <ion-icon class="save_button" name="ios-save" title="save"></ion-icon>
@@ -45,76 +53,84 @@
 <script src="/js/index.js"></script>
 <script src="/js/resume_page.js"></script>
 {{!-- Adding jsPDF --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+  integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
+ <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
 
 <script>
   // inline script for testing only. please add to resume.js when complete.
 
-let menuHidden = true;
+  let menuHidden = true;
 
-// click minimize menu button on the menu.
-$(".min_max").click(function(){
+  // click minimize menu button on the menu.
+  $(".min_max").click(function () {
 
-  if (menuHidden){
-    // have the menu slide to -90Y 
-    $(".edit_menu").attr("style", "transform: translate(-50%, 0);");
+    if (menuHidden) {
+      // have the menu slide to -90Y 
+      $(".edit_menu").attr("style", "transform: translate(-50%, 0);");
 
-    // rotate ion icon 180 deg on the X
-    $(".drop_menu").attr("style", "transform: rotate(0deg);");
+      // rotate ion icon 180 deg on the X
+      $(".drop_menu").attr("style", "transform: rotate(0deg);");
 
-    // toggle menuHidden variable
-    menuHidden = !menuHidden;
-  } else {
-    // menu slide back to -50%, 0
-    $(".edit_menu").attr("style", "transform: translate(-50%, 90%);");
+      // toggle menuHidden variable
+      menuHidden = !menuHidden;
+    } else {
+      // menu slide back to -50%, 0
+      $(".edit_menu").attr("style", "transform: translate(-50%, 90%);");
 
-    // remove rotate
-    $(".drop_menu").attr("style", "transform: rotate(180deg);");
+      // remove rotate
+      $(".drop_menu").attr("style", "transform: rotate(180deg);");
 
-    // toggle menuHidden variable
-    menuHidden = !menuHidden;
-  };
+      // toggle menuHidden variable
+      menuHidden = !menuHidden;
+    };
 
+  });
+
+  $(document).ready(function () {
+    console.log(`app.js ready!`);
+    /* ----- Code Start ----- */
+
+    //logo icon animation
+    let logoAnimate = setInterval(function () {
+
+      $("#logo_icon").attr("style", "transform: scale(1.4)");
+
+      let frame2 = setInterval(function () {
+        $("#logo_icon").attr("style", "transform: scale(1) translateY(.2em);");
+        clearInterval(frame2);
+      }, 600)
+
+      clearInterval(logoAnimate);
+    }, 500);
+
+  });
+
+
+    $('#download').click(function () {
+      var w = document.getElementById("resume-content").offsetWidth;
+        var h = document.getElementById("resume-content").offsetHeight;
+        
+       html2canvas(document.querySelector("#resume-content")).then(canvas => {
+    document.body.appendChild(canvas)
 });
-
-$( document ).ready(function() {
-console.log(`app.js ready!`);
-/* ----- Code Start ----- */
-
-//logo icon animation
-let logoAnimate = setInterval(function(){
-
-  $("#logo_icon").attr("style", "transform: scale(1.4)");
-
-  let frame2 = setInterval(function(){
-    $("#logo_icon").attr("style", "transform: scale(1) translateY(.2em);");
-    clearInterval(frame2);
-  }, 600)
-
-  clearInterval(logoAnimate);
-}, 500);
-
-
-var doc = new jsPDF();
-var specialElementHandlers = {
-    '.tools': function (element, renderer) {
-        return true;
-    }
-};
-
-$('#download').click(function () {
-    doc.fromHTML($('.site_container').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
+        html2canvas(document.getElementById("resume-content"), {
+            dpi: 300, // Set to 300 DPI
+            scale: 3, // Adjusts your resolution
+            onrendered: function (canvas) {
+                var img = canvas.toDataURL("image/jpeg", 1);
+                var doc = new jsPDF('L', 'px', [w, h]);
+                doc.addImage(img, 'JPEG', 0, 0, w, h);
+                doc.save('sample-file.pdf');
+            }
+        });
     });
-    doc.save('sample-file.pdf');
-});
 
- 
-
-/* ------ Code End ------ */
-});
-console.log(`loading...`);
+  /* ------ Code End ------ */
+  console.log(`loading...`);
 
 
 </script>
+

@@ -6,38 +6,38 @@ console.log(`-------------------------------------------------------------------
 console.log(`questions.js loaded.`);
 console.log(`--------------------------------------------------------------------------------`);
 
-$( document ).ready(function() {
-console.log(`app.js ready!`);
+$(document).ready(function () {
+    console.log(`app.js ready!`);
 
     /* ----- Code Start ----- */
 
     let myKey = "HASHKEY123"
 
     // test to see if we can post the object
-    $(".big_red_button").click(function() {
+    $(".big_red_button").click(function () {
 
         $.get({
             url: `/testing/${myKey}`
-        }).then(function(data){
+        }).then(function (data) {
             console.log(data);
         });
     });
 
-    $(".save_button").click(function() {
+    $(".save_button").click(function () {
 
         let updatedValue = $(".update_field").val();
 
-        if (updatedValue.length > 64){
+        if (updatedValue.length > 64) {
             alert("that's to long.");
         } else {
-            
+
             console.log("stuffs n thingz");
 
             $.ajax({
                 method: "PUT",
                 url: `/testing/123/${myKey}`,
                 data: updatedValue
-            }).then(function(returnValue){
+            }).then(function (returnValue) {
 
                 // then nothin'
 
