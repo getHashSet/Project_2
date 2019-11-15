@@ -3,7 +3,7 @@
 // var $exampleDescription = $("#example-description");
 // var $submitBtn = $("#submit");
 // var $exampleList = $("#example-list");
-var $questionBtn = $("#question-btn");
+var $questionBtn = $(".question-btn");
 var $resumeBtn = $("#resume-btn");
 var $homeBtn = $(".home-btn");
 
