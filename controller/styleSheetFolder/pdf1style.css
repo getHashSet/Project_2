@@ -11,6 +11,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -18,17 +20,48 @@
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    height: 25%;
-    background-color: #3498db; }
-    #pdf .name .square {
-      height: 50px;
-      width: 50px;
-      background-color: #9b59b6; }
+    height: 20%;
+    background-color: #538cc6; }
+    #pdf .name .full_name {
+      font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+      width: 75%; }
+    #pdf .name .picture_url {
+      height: 150px;
+      width: 150px;
+      border-radius: 100%; }
   #pdf .past_jobs {
     width: 75%;
-    height: 75%;
-    background-color: #2ecc71; }
-  #pdf .specific_info {
+    height: 80%;
+    background-color: #ecf0f1;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #pdf .past_jobs p {
+      padding-left: 10px;
+      padding-right: 5px;
+      font-size: 110%; }
+    #pdf .past_jobs .job1_start {
+      width: 100px; }
+    #pdf .past_jobs .job1_end {
+      width: 100px; }
+    #pdf .past_jobs .opening_statment {
+      font-weight: bolder; }
+    #pdf .past_jobs .titles {
+      font-style: oblique;
+      font-size: 140%; }
+    #pdf .past_jobs .description {
+      font-size: 95%; }
+  #pdf .contact_info {
     width: 25%;
-    height: 75%;
-    background-color: #2d3436; }
+    height: 80%;
+    background-color: #d9d9d9;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #pdf .contact_info p {
+      font-weight: bolder;
+      padding-left: 10px;
+      font-size: 105%; }
