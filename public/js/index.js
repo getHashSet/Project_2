@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // // Get references to page elements
 // var $exampleText = $("#example-text");
 // var $exampleDescription = $("#example-description");
@@ -111,6 +112,7 @@ var resumeBtnClick = function() {
   // console.log("resume");
   userLogins.user_email = $("#user").val();
   userLogins.password = $("#passwd").val();
+  console.log(userLogins);
   $.ajax({
     url: "/user_login",
     method: "POST",
