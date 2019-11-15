@@ -30,8 +30,9 @@
       </p>
     </div>
 
-    <div class="tools" id="editor">
-      <ion-icon name="ios-download" id="save"></ion-icon>
+
+    <div class="tools">
+      <ion-icon name="ios-download" id="download"></ion-icon>
       <ion-icon name="ios-mail"></ion-icon>
       <ion-icon class="save_button" name="ios-save" title="save"></ion-icon>
       <ion-icon class="big_red_button" name="ios-heart"></ion-icon>
@@ -45,6 +46,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/resume_page.js"></script>
+{{!-- Adding jsPDF --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
 <script>
   // inline script for testing only. please add to resume.js when complete.
@@ -92,6 +95,23 @@ let logoAnimate = setInterval(function(){
 
   clearInterval(logoAnimate);
 }, 500);
+
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '.tools': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#download').click(function () {
+    doc.fromHTML($('.site_container').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+
  
 
 /* ------ Code End ------ */
