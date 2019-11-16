@@ -3,6 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 let bodyParser = require("body-parser");
 var db = require("./models");
+const passport = require("passport");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -31,12 +32,13 @@ app.engine(
   })
 );
 app.set("view engine", "handlebars");
+app.use(passport.initialize());
 
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
