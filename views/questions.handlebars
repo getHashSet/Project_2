@@ -20,7 +20,7 @@
               <input id="phone_number" placeholder="phone_number">
               <!--user_address-->
               <h3>Address</h3>
-              <input placeholder="user_address">
+              <input id="user_address" placeholder="home_address">
             </section>
             <button class="big_red_button" style="background-color: #e74c3c; color: #fff;">PRESS</button>
             <form>
@@ -32,10 +32,12 @@
             <hr>
 
             <section class="page_question2">
-              <h3>Do you have a github account?</h3>
+              <h3>Do you have a LinkedIn account? If so please provide your user name</h3>
+              <!--linkedin-->
+              <input id="linkedin" placeholder="linkedin_username">
+              <h3>Do you have a Github account? If so please provide your user name</h3>
               <!--github-->
-              <input type ="radio" name="github" value="yes">Yes<br>
-              <input type="radio" name="github" value="no">No<br>
+              <input id="github" placeholder="github_username">
               <!--picture_url-->
               <h3>Do you have a picture you would like to share?</h3>
               <input id="picture_url" placeholder="picture_url">
@@ -62,16 +64,16 @@
               <!--job_title_1-->
               <h3>Title</h3>
               <input id="job_title_1" placeholder="Job_Title_1">
-              <!--job1_start-->
+              <!--job_start_1-->
               <h3>Start date</h3>
               <input id="job_start_1" placeholder="Job_Start_1">
-              <!--job1_end-->
+              <!--job_end_1-->
               <h3>End date</h3>
               <input id="job_end_1" placeholder="Job_End_1">
-              <!--job1_description-->
+              <!--job_description_1-->
               <h3>Description</h3>
               <input id="job_description_1" placeholder="Job_Description_1">
-              <!--job1_skills-->
+              <!--job_skills_1-->
               <h3>Skills acquired/used</h3>
               <input id="job_skills_1" placeholder="Job_Skills_1">
             </section>
@@ -91,10 +93,10 @@
               <input id="job_start_2" placeholder="Job_Start_2">
               <!--job_end_2-->
               <h3>End date</h3>
-              <input placeholder="Job_End_2">
+              <input id="job_end_2" placeholder="Job_End_2">
               <!--job_description_2-->
               <h3>Description</h3>
-              <input placeholder="Job_Description_2">
+              <input id="job_description_2" placeholder="Job_Description_2">
               <!--job_skills_2-->
               <h3>Skills acquired/used</h3>
               <input id="job_skills_2" placeholder="Job_Skills_2">
@@ -109,7 +111,7 @@
               <input id="job_company_name_3" placeholder="Job_Company_Name_3">
               <!--job_title_3-->
               <h3>Title</h3>
-              <input="job_title_3" placeholder="Job_Title_3">
+              <input id="job_title_3" placeholder="Job_Title_3">
               <!--job_start_3-->
               <h3>Start date</h3>
               <input id="job_start_3" placeholder="Job_Start_3">
@@ -191,12 +193,9 @@
 
             <section class="page_question11">
               <h2>References (pg. 1)</h2>
-              <!--combine first and last names to make-->
               <!--reference_name_1-->
-              <h3>First Name</h3>
-              <input id="ref_first_name_1" placeholder="Reference_First_Name_1">
-              <h3>Last Name</h3>
-              <input id="ref_last_name_1"placeholder="Reference_Last_Name_1">
+              <h3>Name</h3>
+              <input id="reference_name_1" placeholder="Reference_Name_1">
               <!--reference_number_1-->
               <h3>Phone Number</h3>
               <input id="reference_number_1" placeholder="Reference_Phone_Number_1">
@@ -212,13 +211,10 @@
 
             <section class="page_question12">
               <h2>References (pg. 2)</h2>
-              <!--combine first and last names to make-->
               <!--reference_name_2-->
               <h3>First Name</h3>
-              <input id="ref_first_name_2" placeholder="Reference_First_Name_2">
-              <h3>Last Name</h3>
-              <input id="ref_last_name_2" placeholder="Reference_Last_Name_2">
-              <!--reference_number_2-->
+              <input id="reference_name_2" placeholder="Reference_First_Name_2">
+              <!--reference_name_2-->
               <h3>Phone Number</h3>
               <input id="reference_number_2" placeholder="Reference_Phone_Number_2">
               <!--reference_email_2-->
@@ -233,12 +229,9 @@
 
             <section class="page_question13">
               <h2>References (pg. 3)</h2>
-              <!--combine first and last names to make-->
               <!--reference_name_3-->
-              <h3>First Name</h3>
-              <input id="ref_first_name_3" placeholder="Reference_First_Name_3">
-              <h3>Last Name</h3>
-              <input id="ref_last_name_3" placeholder="Reference_Last_Name_3">
+              <h3>Name</h3>
+              <input id="reference_name_3" placeholder="Reference_First_Name_3">
               <!--reference_number_3-->
               <h3>Phone Number</h3>
               <input id="reference_number_3" placeholder="Reference_Phone_Number_3">
@@ -271,13 +264,13 @@
               <h2>Project (pg. 2)</h2>
               <!--project_name_2-->
               <h3>Project 2</h3>
-              <input id="project_name_2" placeholder="Project__Name_2">
+              <input id="project_name_2" placeholder="Project_Name_2">
               <!--project_info_2-->
               <h3>Project 2 Details</h3>
               <input id="project_info_2" placeholder="Project_Details_2">
               <!--project_url_2-->
               <h3>Project 2 URL</h3>
-              <input id="project_url_2" placeholder="Project_URL_2">
+              <input id="project_url_2" placeholder="Project_url_2">
             </section>
 
             <hr>
@@ -292,7 +285,7 @@
               <input id="project_info_3" placeholder="Project_Details_3">
               <!--project_url_3-->
               <h3>Project 3 URL</h3>
-              <input id="project_url_3" placeholder="Project_URL_3">
+              <input id="project_url_3" placeholder="Project_url_3">
             </section>
 
             <!--qr_url-->
@@ -315,8 +308,4 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<<<<<<< HEAD
-=======
-<script src="/js/index.js"></script>
->>>>>>> c124d6695032eeb1f26970fd6c6a7826926db587
 <script src="/js/questions.js"></script>
