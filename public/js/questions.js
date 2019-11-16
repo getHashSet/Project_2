@@ -172,154 +172,6 @@ $(document).ready(function () {
 
             /***************Page_9*****************/
 
-<<<<<<< HEAD
-            if ($("#school_name_2").val() != "") {
-                user_data.school_name_2 = $("#school_name_2").val();
-                console.log(user_data.school_name_2);
-            }
-            if ($("#school_grad_date_2").val() != "") {
-                user_data.school_grad_date_2 = $("#school_grad_date_2").val();
-                console.log(user_data.school_grad_date_2);
-            }
-            if ($("#school_major_2").val() != "") {
-                user_data.school_major_2 = $("#school_major_2").val();
-                console.log(user_data.school_major_2);
-            }
-
-            /***************Page_10*****************/
-
-            if ($("#skill_1").val() != "") {
-                user_data.skill_1 = $("#skill_1").val();
-                console.log(user_data.skill_1);
-            }
-            if ($("#skill_2").val() != "") {
-                user_data.skill_2 = $("#skill_2").val();
-                console.log(user_data.skill_2);
-            }
-            if ($("#skill_3").val() != "") {
-                user_data.skill_3 = $("#skill_3").val();
-                console.log(user_data.skill_3);
-            }
-            if ($("#skill_4").val() != "") {
-                user_data.skill_4 = $("#skill_4").val();
-                console.log(user_data.skill_4);
-            }
-            if ($("#skill_5").val() != "") {
-                user_data.skill_5 = $("#skill_5").val();
-                console.log(user_data.skill_5);
-            }
-
-            /***************Page_11*****************/
-
-            if ($("#reference_name_1").val() != "") {
-                user_data.reference_name_1 = $("#reference_name_1").val();
-                console.log(user_data.reference_name_1);
-            }
-            if ($("#reference_number_1").val() != "") {
-                user_data.reference_number_1 = $("#reference_number_1").val();
-                console.log(user_data.reference_number_1);
-            }
-            if ($("#reference_email_1").val() != "") {
-                user_data.reference_email_1 = $("#reference_email_1").val();
-                console.log(user_data.reference_email_1);
-            }
-            if ($("#reference_relationship_1").val() != "") {
-                user_data.reference_relationship_1 = $("#reference_relationship_1").val();
-                console.log(user_data.reference_relationship_1);
-            }
-
-            /***************Page_12*****************/
-            
-            if ($("#reference_name_2").val() != "") {
-                user_data.reference_name_2 = $("#reference_name_2").val();
-                console.log(user_data.reference_name_2);
-            }
-            if ($("#reference_number_2").val() != "") {
-                user_data.reference_number_2 = $("#reference_number_2").val();
-                console.log(user_data.reference_number_2);
-            }
-            if ($("#reference_email_2").val() != "") {
-                user_data.reference_email_2 = $("#reference_email_2").val();
-                console.log(user_data.reference_email_2);
-            }
-            if ($("#reference_relationship_2").val() != "") {
-                user_data.reference_relationship_2 = $("#reference_relationship_2").val();
-                console.log(user_data.reference_relationship_2);
-            }
-
-            /***************Page_13*****************/
-
-            if ($("#reference_name_3").val() != "") {
-                user_data.reference_name_3 = $("#reference_name_3").val();
-                console.log(user_data.reference_name_3);
-            }
-            if ($("#reference_number_3").val() != "") {
-                user_data.reference_number_3 = $("#reference_number_3").val();
-                console.log(user_data.reference_number_3);
-            }
-            if ($("#reference_email_3").val() != "") {
-                user_data.reference_email_3 = $("#reference_email_3").val();
-                console.log(user_data.reference_email_3);
-            }
-            if ($("#reference_relationship_3").val() != "") {
-                user_data.reference_relationship_3 = $("#reference_relationship_3").val();
-                console.log(user_data.reference_relationship_3);
-            }
-
-            /***************Page_14*****************/
-
-            if ($("#project_name_1").val() != "") {
-                user_data.project_name_1 = $("#project_name_1").val();
-                console.log(user_data.project_name_1);
-            }
-            if ($("#project_info_1").val() != "") {
-                user_data.project_info_1 = $("#project_info_1").val();
-                console.log(user_data.project_info_1);
-            }
-            if ($("#project_url_1").val() != "") {
-                user_data.project_url_1 = $("#project_url_1").val();
-                console.log(user_data.project_url_1);
-            }
-
-            /***************Page_15*****************/
-
-            if ($("#project_name_2").val() != "") {
-                user_data.project_name_2 = $("#project_name_2").val();
-                console.log(user_data.project_name_2);
-            }
-            if ($("#project_info_2").val() != "") {
-                user_data.project_info_2 = $("#project_info_2").val();
-                console.log(user_data.project_info_2);
-            }
-            if ($("#project_url_2").val() != "") {
-                user_data.project_url_2 = $("#project_url_2").val();
-                console.log(user_data.project_url_2);
-            }
-
-            /***************Page_16*****************/
-
-            if ($("#project_name_3").val() != "") {
-                user_data.project_name_3 = $("#project_name_3").val();
-                console.log(user_data.project_name_3);
-            }
-            if ($("#project_info_3").val() != "") {
-                user_data.project_info_3 = $("#project_info_3").val();
-                console.log(user_data.project_info_3);
-            }
-            if ($("#project_url_3").val() != "") {
-                user_data.project_url_3 = $("#project_url_3").val();
-                console.log(user_data.project_url_3);
-            }
-
-            /***************Page_17*****************/
-        }
-    });
-
-
-    /*
-    let collectUserData = {
-        user_email:"matthew_carpenter@icloud.com",
-=======
 $(document).ready(function () {
     console.log(`app.js ready!`);
 
@@ -336,7 +188,6 @@ let $nextButton = $(".next-btn");
 
     let collectUserData = {
         user_email: "matthew_carpenter@icloud.com",
->>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
         picture_url: "https://avatars1.githubusercontent.com/u/53285976?s=460&v=4",
         first_name: "Matthew",
         last_name: "Carpenter",
@@ -378,11 +229,7 @@ let $nextButton = $(".next-btn");
         skill_1: "MERN",
         skill_2: "LAMP",
         skill_3: "Unity",
-<<<<<<< HEAD
-        skill_4: "VR", 
-=======
         skill_4: "VR",
->>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
         skill_5: "C--",
         reference_name_1: "David L",
         reference_number_1: "555-1701",
@@ -410,10 +257,6 @@ let $nextButton = $(".next-btn");
         //project_img_url_3: DataTypes.STRING,
         //qr_url: DataTypes.STRING,
     };
-<<<<<<< HEAD
-    */
-=======
->>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
 
     // test to see if we can post the object
     $(".big_red_button").click(function () {
@@ -425,11 +268,6 @@ let $nextButton = $(".next-btn");
 
     })
 
-<<<<<<< HEAD
-
-
-
-=======
     let backButton = function () {
         event.preventDefault();
         window.location = "/";
@@ -451,7 +289,6 @@ let $nextButton = $(".next-btn");
     $backButton.on("click", backButton);
     $skipButton.on("click", skipButton);
     $nextButton.on("click", nextButton);
->>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
 
 
 
