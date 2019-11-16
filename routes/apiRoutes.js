@@ -7,6 +7,8 @@ let JwtStrategy = passportJWT.Strategy;
 let jwtOptions = {};
 jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 jwtOptions.secretOrKey = "wowwow";
+const jwt = require("jsonwebtoken");
+
 module.exports = app => {
   // this is all the password routes
   // get all users
@@ -14,6 +16,20 @@ module.exports = app => {
     console.log(db.User_Login);
     db.User_Logins.getAllUsers().then(user => res.json(user));
   });
+
+  // create some helper functions to work on the database
+  // const createUser = async ({ name, password }) => {
+  //   return await User.create({ name, password });
+  // };
+  // const getAllUsers = async () => {
+  //   return await User.findAll();
+  // };
+  const getUser = async obj => {
+    console.log(db.User_Login);
+    return await db.User_Login.findOne({
+      where: obj
+    });
+  };
 
   // protected route
   app.get(
@@ -39,13 +55,15 @@ module.exports = app => {
 
   //login route
   app.post("/protected", async function(req, res) {
-    const { userName, password } = req.body;
-    if (password && userName) {
-      let user = await getUser({ password: userPassword });
+    const userPassword = req.body.password;
+    const userName = req.body.user_email;
+    if (userPassword && userName) {
+      let user = await getUser({ userName });
+      console.log(user.password);
       if (!user) {
         res.status(401).json({ message: "No such user found" });
       }
-      if (user.password === userPassword) {
+      if (user.password == userPassword) {
         // from now on we"ll identify the user by the id and the id is the
         // only personalized value that goes into our token
         let payload = { id: user.id };
@@ -57,17 +75,6 @@ module.exports = app => {
     }
   });
 
-  let strategy = new JwtStrategy(jwtOptions, function(User_Login, next) {
-    console.log("payload received", User_Login);
-    let user = getUser({ id: User_Login.id });
-    if (user) {
-      next(null, user);
-    } else {
-      next(null, false);
-    }
-  });
-  // use the strategy
-  passport.use(strategy);
   app.get(
     "/protected",
     passport.authenticate("jwt", { session: false }),
