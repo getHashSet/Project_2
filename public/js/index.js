@@ -105,11 +105,6 @@ var questionsBtnClick = function() {
   event.preventDefault();
   // console.log("questions");
   window.location = "/question";
-};
-
-var resumeBtnClick = function() {
-  event.preventDefault();
-  // console.log("resume");
   userLogins.user_email = $("#user").val();
   userLogins.password = $("#passwd").val();
   console.log(userLogins);
@@ -118,8 +113,14 @@ var resumeBtnClick = function() {
     method: "POST",
     data: userLogins
   }).then(function(data) {
-    window.location = "/resume";
+    window.location = "//question";
   });
+};
+
+var resumeBtnClick = function() {
+  event.preventDefault();
+  // console.log("resume");
+  window.location = "/resume";
 };
 
 var homeBtnClick = function() {
