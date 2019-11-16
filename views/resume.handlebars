@@ -32,8 +32,13 @@
 
 
     <div class="tools">
+<<<<<<< HEAD
+      <ion-icon name="ios-download"></ion-icon>
+      <ion-icon class="email" name="ios-mail"></ion-icon>
+=======
       <ion-icon name="ios-download" id="download"></ion-icon>
       <ion-icon name="ios-mail"></ion-icon>
+>>>>>>> 7847e7a0697e38afae384bc447d801e03d11ddde
       <ion-icon class="save_button" name="ios-save" title="save"></ion-icon>
       <ion-icon class="big_red_button" name="ios-heart"></ion-icon>
     </div>
@@ -43,14 +48,36 @@
   </div>
 
 </div>
+
+<div class="haze"></div>
+<div class="resume_update_window_root"> 
+  <div class="update_window_floating_child">
+    <span class="pop_up_window" > <ion-icon name="ios-close"></ion-icon></span>
+    <h3>Information will go here.</h3>
+    <div class=".break"></div>
+    <p>More Information</p>
+  </div>
+</div>
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/resume_page.js"></script>
 {{!-- Adding jsPDF --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
+
+
+
+
+
+
+
+
 <script>
+  //////////////////////////////////////////////////////////////////////////////
   // inline script for testing only. please add to resume.js when complete.
+  //////////////////////////////////////////////////////////////////////////////
 
 let menuHidden = true;
 
@@ -113,6 +140,35 @@ $('#download').click(function () {
 });
 
  
+
+ // pop up window
+$(".haze").click(function() {
+  console.log("You're doing it Peter.");
+  $(this).css("opacity", "0");
+  $(".resume_update_window_root").css("opacity", "0");
+  let easeOut = setInterval(function(){
+    $(".resume_update_window_root").css("display","none");
+      // reset window opacity
+    $(".haze").css("display", "none");
+    $(".haze").css("opacity", ".5");
+    clearInterval(easeOut);
+  }, 300);
+});
+
+$(".pop_up_window").click(function() {
+  console.log("You're doing it Peter.");
+  $(".resume_update_window_root").css("opacity", "0");
+  $(".haze").css("opacity", "0");
+  let easeOut = setInterval(function(){
+    $(".resume_update_window_root").css("display","none");
+    $(".haze").css("display","none");
+        // reset window opacity
+   $(".haze").css("opacity", ".5");
+    clearInterval(easeOut);
+  }, 300);
+
+});
+
 
 /* ------ Code End ------ */
 });
