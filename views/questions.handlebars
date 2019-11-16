@@ -312,3 +312,29 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/questions.js"></script>
+
+<script>
+  let $backButton = $(".back-btn");
+  let $skipButton = $(".skip-btn");
+  let $nextButton = $(".next-btn");
+
+    let backButton = function () {
+        event.preventDefault();
+        window.location = "/";
+    };
+
+    let skipButton = function () {
+        event.preventDefault();
+        window.location = "/resume";
+    };
+
+    let nextButton = function () {
+        event.preventDefault();
+        window.location = "/resume";
+    };
+
+    $backButton.on("click", backButton);
+    $skipButton.on("click", skipButton);
+    $nextButton.on("click", nextButton);
+
+</script>
