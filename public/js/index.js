@@ -113,14 +113,24 @@ var questionsBtnClick = function() {
     method: "POST",
     data: userLogins
   }).then(function(data) {
-    window.location = "//question";
+    window.location = "/question";
   });
 };
 
 var resumeBtnClick = function() {
   event.preventDefault();
   // console.log("resume");
-  window.location = "/resume";
+  userLogins.user_email = $("#user").val();
+  userLogins.password = $("#passwd").val();
+  $.ajax({
+    url: "/protected",
+    method: "POST",
+    data: userLogins
+  }).then(function(data) {
+    window.location = "/resume";
+    // res.json(data);
+    console.log("we work");
+  });
 };
 
 var homeBtnClick = function() {
