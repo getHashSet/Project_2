@@ -172,6 +172,7 @@ $(document).ready(function () {
 
             /***************Page_9*****************/
 
+<<<<<<< HEAD
             if ($("#school_name_2").val() != "") {
                 user_data.school_name_2 = $("#school_name_2").val();
                 console.log(user_data.school_name_2);
@@ -318,6 +319,24 @@ $(document).ready(function () {
     /*
     let collectUserData = {
         user_email:"matthew_carpenter@icloud.com",
+=======
+$(document).ready(function () {
+    console.log(`app.js ready!`);
+
+
+   
+    //     <button class="next-btn">Next</button>
+
+
+let $backButton = $(".back-btn");
+let $skipButton = $(".skip-btn");
+let $nextButton = $(".next-btn");
+
+    /* ----- Code Start ----- */
+
+    let collectUserData = {
+        user_email: "matthew_carpenter@icloud.com",
+>>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
         picture_url: "https://avatars1.githubusercontent.com/u/53285976?s=460&v=4",
         first_name: "Matthew",
         last_name: "Carpenter",
@@ -359,7 +378,11 @@ $(document).ready(function () {
         skill_1: "MERN",
         skill_2: "LAMP",
         skill_3: "Unity",
+<<<<<<< HEAD
         skill_4: "VR", 
+=======
+        skill_4: "VR",
+>>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
         skill_5: "C--",
         reference_name_1: "David L",
         reference_number_1: "555-1701",
@@ -387,7 +410,10 @@ $(document).ready(function () {
         //project_img_url_3: DataTypes.STRING,
         //qr_url: DataTypes.STRING,
     };
+<<<<<<< HEAD
     */
+=======
+>>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
 
     // test to see if we can post the object
     $(".big_red_button").click(function () {
@@ -399,9 +425,33 @@ $(document).ready(function () {
 
     })
 
+<<<<<<< HEAD
 
 
 
+=======
+    let backButton = function () {
+        event.preventDefault();
+        window.location = "/";
+    };
+
+    let skipButton = function () {
+        event.preventDefault();
+        window.location = "/resume";
+    };
+
+    let nextButton = function () {
+        event.preventDefault();
+        window.location = "/resume";
+    };
+
+
+
+
+    $backButton.on("click", backButton);
+    $skipButton.on("click", skipButton);
+    $nextButton.on("click", nextButton);
+>>>>>>> a0595f117167a06855831bbc2e53851741a1a4ac
 
 
 

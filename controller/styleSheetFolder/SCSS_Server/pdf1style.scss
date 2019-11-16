@@ -10,25 +10,63 @@ overflow: hidden;
 
      .name{
           display: flex;
+          flex-wrap: wrap;
           justify-content: center;
           align-items: center;
           width: 100%;
-          height: 25%;
+          height: 20%;
           background-color: $blue;
-         .square{
-              height: 50px;
-              width: 50px;
-              background-color: $purple;
+          .full_name{
+               font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+               width: 75%; 
+         }
+          .quote{
+          }
+         .picture_url{
+              height: 150px;
+              width: 150px;
+              border-radius: 100%;
          }
      }
      .past_jobs{
           width: 75%;
-          height: 75%;
-          background-color: $green;
+          height: 80%;
+          background-color: $white;
+          flex-wrap: wrap;
+          p{
+               padding-left: 10px;
+               padding-right: 5px;
+               font-size: 110%;
+          }
+          .job1_start{
+width: 100px;
+          }
+          .job1_end{
+               width: 100px;
+
+          }
+          .opening_statment{
+               font-weight: bolder;
+          }
+          .titles{
+               font-style: oblique;
+               font-size: 140%;
+          }
+          .description{
+               font-size: 95%;
+          }
      }
-     .specific_info{
+     .contact_info{
           width: 25%;
-          height: 75%;
-          background-color: $black;
+          height: 80%;
+          background-color: $steel;
+          flex-direction: column;
+          align-items: center;
+
+          p{
+               font-weight: bolder;
+               padding-left: 10px;
+               font-size: 105%;
+          }
      }
 }
