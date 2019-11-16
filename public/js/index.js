@@ -165,3 +165,10 @@ $questionBtn.on("click", questionsBtnClick);
 $resumeBtn.on("click", resumeBtnClick);
 $homeBtn.on("click", homeBtnClick);
 $saveBtn.on("click", saveBtnClick);
+
+addEventListener("keyup", event => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    resumeBtnClick();
+  }
+});
