@@ -50,6 +50,18 @@
   </div>
 
 </div>
+
+<div class="haze"></div>
+<div class="resume_update_window_root"> 
+  <div class="update_window_floating_child">
+    <span class="pop_up_window" > <ion-icon name="ios-close"></ion-icon></span>
+    <h3>Information will go here.</h3>
+    <div class=".break"></div>
+    <p>More Information</p>
+  </div>
+</div>
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/resume_page.js"></script>
@@ -60,8 +72,18 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
 
+
+
+
+
+
+
+
+
 <script>
+  //////////////////////////////////////////////////////////////////////////////
   // inline script for testing only. please add to resume.js when complete.
+  //////////////////////////////////////////////////////////////////////////////
 
   let menuHidden = true;
 
@@ -110,7 +132,7 @@
     //Downloading resume as an image using HTML2Canvas
     $('#download').click(function () {
       html2canvas(document.querySelector("#resume-content")).then(canvas => {
-        document.body.appendChild(canvas);
+        
         var a = document.createElement('a');
         // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
         a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
@@ -122,11 +144,38 @@
 
   });
 
+ // pop up window
+$(".haze").click(function() {
+  console.log("You're doing it Peter.");
+  $(this).css("opacity", "0");
+  $(".resume_update_window_root").css("opacity", "0");
+  let easeOut = setInterval(function(){
+    $(".resume_update_window_root").css("display","none");
+      // reset window opacity
+    $(".haze").css("display", "none");
+    $(".haze").css("opacity", ".5");
+    clearInterval(easeOut);
+  }, 300);
+});
+
+$(".pop_up_window").click(function() {
+  console.log("You're doing it Peter.");
+  $(".resume_update_window_root").css("opacity", "0");
+  $(".haze").css("opacity", "0");
+  let easeOut = setInterval(function(){
+    $(".resume_update_window_root").css("display","none");
+    $(".haze").css("display","none");
+        // reset window opacity
+   $(".haze").css("opacity", ".5");
+    clearInterval(easeOut);
+  }, 300);
+
+});
 
 
+/* ------ Code End ------ */
 
-  /* ------ Code End ------ */
-  console.log(`loading...`);
+console.log(`loading...`);
 
 
 </script>

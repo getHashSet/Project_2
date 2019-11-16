@@ -49,5 +49,12 @@ $(document).ready(function () {
 
     });
 
+    $(`.email`).click(function(event){
+        event.preventDefault();
+        let email = '';
+        let subject = `myResume_2019`;
+        let emailBody = '[see attached file]';
+        window.location = 'mailto:'+ email + '?subject=' + subject + '&body=' +   emailBody;;
+    });
 
 });

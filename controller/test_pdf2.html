@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+     <title>resume PDF 2 style</title>
+     <link rel="stylesheet" type="text/css" href="./styleSheetFolder/pdf2style.css">
+     <style type="text/css">
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               font: 16px Helvetica, Sans-Serif;
+               line-height: 24px;
+               background: url(images/noise.jpg);
+          }
+
+          .clear {
+               clear: both;
+          }
+
+          #page-wrap {
+               width: 800px;
+               margin: 40px auto 60px;
+          }
+
+          .picture_url {
+               float: right;
+               margin: -30px 0 0 0;
+          }
+
+          h1 {
+               margin: 0 0 16px 0;
+               padding: 0 0 16px 0;
+               font-size: 42px;
+               font-weight: bold;
+               letter-spacing: -2px;
+               border-bottom: 1px solid #999;
+          }
+
+          h2 {
+               font-size: 20px;
+               margin: 0 0 6px 0;
+               position: relative;
+          }
+
+          h2 span {
+               position: absolute;
+               bottom: 0;
+               right: 0;
+               font-style: italic;
+               font-family: Georgia, Serif;
+               font-size: 16px;
+               color: #999;
+               font-weight: normal;
+          }
+
+          p {
+               margin: 0 0 16px 0;
+          }
+
+          a {
+               color: #999;
+               text-decoration: none;
+               border-bottom: 1px dotted #999;
+          }
+
+          a:hover {
+               border-bottom-style: solid;
+               color: black;
+          }
+
+          ul {
+               margin: 0 0 32px 17px;
+          }
+
+          .opening_statment {
+               width: 500px;
+               float: left;
+          }
+
+          .opening_statment p {
+               font-family: Georgia, Serif;
+               font-style: italic;
+               color: #666;
+          }
+
+          dt {
+               font-style: italic;
+               font-weight: bold;
+               font-size: 18px;
+               text-align: right;
+               padding: 0 26px 0 0;
+               width: 150px;
+               float: left;
+               height: 100px;
+               border-right: 1px solid #999;
+          }
+
+          dd {
+               width: 600px;
+               float: right;
+          }
+
+          dd.clear {
+               float: none;
+               margin: 0;
+               height: 15px;
+          }
+     </style>
+</head>
+
+<body id="pdf2">
+
+     <div id="page-wrap">
+
+          <img src="images/cthulu.png" class="picture_url" />
+
+          <div id="contact-info" class="vcard">
+
+               <!-- Microformats! -->
+
+               <h1 class="full_name">Markus p. Pennyworth</h1>
+
+               <p>
+                    Cell: <span class="phone_number">555-666-7777</span><br />
+                    Email: <a class="user_email">greatoldone@lovecraft.com</a>
+               </p>
+          </div>
+
+          <div class="opening_statment">
+               <p>
+                    I am an outgoing and energetic (ask anybody) young professional, seeking a
+                    career that fits my professional skills and personality.
+               </p>
+          </div>
+
+          <div class="clear"></div>
+
+          <dl>
+               <dd class="clear"></dd>
+
+               <dt>Education</dt>
+               <dd>
+                    <h2 class="school1_name">UOFA</h2>
+                    <p><strong>Major:</strong class="school1_major"> Public Relations<br />
+                         <h2 class="school2_name">UOFB</h2>
+                         <p><strong>Major:</strong class="school2_major"> NOT Public Relations<br />
+
+               </dd>
+
+               <dd class="clear"></dd>
+
+               <dt>Skills</dt>
+               <dd>
+                    <h2 class="skill1">Office skills</h2>
+                    <h2 class="skill2">Office kills</h2>
+                    <h2 class="skill3">Office pills</h2>
+                    <h2 class="skill4">Office spills</h2>
+                    <h2 class="skill5">Office dill pickles?</h2>
+
+               </dd>
+
+               <dd class="clear"></dd>
+               <dt>Experience</dt>
+               <dd>
+                    <h2 class="job1_company_name">Bakers baking <span class="job1_title"> Pro baker/amazing dancer/other info</span></h2>
+                    <ul>
+                         <li class="job1_skills">Creating doughy balls of love</li>
+                         <li class="job1_description">Helped coordinate managers to brew more bread</li>
+                         <li class="job1_start">9/12/12</li>
+                    </ul>
+
+                    <h2 class="job2_company_name">Bakers baking <span class="job1_title"> Pro baker</span></h2>
+                    <ul>
+                         <li class="job2_skills">Creating doughy balls of love</li>
+                         <li class="job2_description">Helped coordinate managers to brew more bread</li>
+                         <li class="job2_start">9/12/12</li>
+                    </ul>
+               </dd>
+
+
+
+               <dd class="clear"></dd>
+
+               <dt>References</dt>
+               <dd class="refrence1_name">Martha Harmon</dd>
+               <dd class="refrence1_number">867-5309</dd>
+               <dd class="refrence1_email">dontatme@goolge.com</dd>
+               <dd class="refrence2_name">Martha Harmon</dd>
+               <dd class="refrence2_number">867-5309</dd>
+               <dd class="refrence2_email">dontatme@goolge.com</dd>
+
+               <dd class="clear"></dd>
+          </dl>
+
+          <div class="clear"></div>
+
+     </div>
+
+</body>
+
+</html>
