@@ -4,7 +4,173 @@
 
 console.log(`--------------------------------------------------------------------------------`);
 console.log(`questions.js loaded.`);
-console.log(`--------------------------------------------------------------------------------`);
+console.log(`--------------------------------------------s------------------------------------`);
+
+$(document).ready(function () {
+    console.log(`app.js ready!`);
+
+    /* ----- Code Start ----- */
+    const user_data = {};
+
+
+    document.addEventListener("keyup", function (event) {
+
+        if (event.keyCode == 9) {
+            //console.log("first name: " + $("#first_name").val());
+            if ($("#first_name").val() != "") {
+                user_data.first_name = $("#first_name").val();
+                console.log(user_data.first_name);
+            }
+            if ($("#last_name").val() != "") {
+                user_data.last_name = $("#last_name").val();
+                console.log(user_data.last_name);
+            }
+            if ($("#user_email").val() != "") {
+                user_data.user_email = $("#user_email").val();
+                console.log(user_data.user_email);
+            }
+            if ($("#phone_number").val() != "") {
+                user_data.phone_number = $("#phone_number").val();
+                console.log(user_data.phone_number);
+            }
+            if ($("#user_address").val() != "") {
+                user_data.user_address = $("#user_address").val();
+                console.log(user_data.user_address);
+            }
+
+            /************Page_2*****************/
+            if ($("#linkedin").val() != "") {
+                user_data.linkedin = $("#linkedin").val();
+                console.log(user_data.linkedin);
+            }
+            if ($("#github").val() != "") {
+                user_data.github = $("#github").val();
+                console.log(user_data.github);
+            }
+            if ($("#picture_url").val() != "") {
+                user_data.picture_url = $("#picture_url").val();
+                console.log(user_data.picture_url);
+            }
+
+            /***************Page_3*****************/
+
+            if ($("#quote").val() != "") {
+                user_data.quote = $("#quote").val();
+                console.log(user_data.quote);
+            }
+            if ($("#about").val() != "") {
+                user_data.about = $("#about").val();
+                console.log(user_data.about);
+            }
+
+            /***************Page_4*****************/
+
+            if ($("#job_company_name_1").val() != "") {
+                user_data.job_company_name_1 = $("#job_company_name_1").val();
+                console.log(user_data.job_company_name_1);
+            }
+            if ($("#job_title_1").val() != "") {
+                user_data.job_title_1 = $("#job_title_1").val();
+                console.log(user_data.job_title_1);
+            }
+            if ($("#job_start_1").val() != "") {
+                user_data.job_start_1 = $("#job_start_1").val();
+                console.log(user_data.job_start_1);
+            }
+            if ($("#job_end_1").val() != "") {
+                user_data.job_end_1 = $("#job_end_1").val();
+                console.log(user_data.job_end_1);
+            }
+            if ($("#job_description_1").val() != "") {
+                user_data.job_description_1 = $("#job_description_1").val();
+                console.log(user_data.job_description_1);
+            }
+            if ($("#job_skills_1").val() != "") {
+                user_data.job_skills_1 = $("#job_skills_1");
+                console.log(user.data.job_skills_1);
+            }
+
+            /***************Page_5*****************/
+
+            if ($("#job_company_name_2").val() != "") {
+                user_data.job_company_name_2 = $("#job_company_name_2").val();
+                console.log(user_data.job_company_name_2);
+            }
+            if ($("#job_title_2").val() != "") {
+                user_data.job_title_2 = $("#job_title_2").val();
+                console.log(user_data.job_title_2);
+            }
+            if ($("#job_start_2").val() != "") {
+                user_data.job_start_2 = $("#job_start_2").val();
+                console.log(user_data.job_start_2);
+            }
+            if ($("#job_end_2").val() != "") {
+                user_data.job_end_2 = $("#job_end_2").val();
+                console.log(user_data.job_end_2);
+            }
+            if ($("#job_description_2").val() != "") {
+                user_data.job_description_2 = $("#job_description_2").val();
+                console.log(user_data.job_description_2);
+            }
+            if ($("#job_skills_2").val() != "") {
+                user_data.job_skills_2 = $("#job_skills_2").val();
+                console.log(user_data.job_skills_2);
+            }
+
+            /***************Page_6*****************/
+
+            if ($("#job_company_name_3").val() != "") {
+                user_data.job_company_name_3 = $("#job_company_name_3").val();
+                console.log(user_data.job_company_name_3);
+            }
+            if ($("#job_title_3").val() != "") {
+                user_data.job_title_3 = $("#job_title_3").val();
+                console.log(user_data.job_title_3);
+            }
+            if ($("#job_start_3").val() != "") {
+                user_data.job_start_3 = $("#job_start_3").val();
+                console.log(user_data.job_start_3);
+            }
+            if ($("#job_end_3").val() != "") {
+                user_data.job_end_3 = $("#job_end_3").val();
+                console.log(user_data.job_end_3);
+            }
+            if ($("#job_description_3").val() != "") {
+                user_data.job_description_3 = $("#job_description_3").val();
+                console.log(user_data.job_description_3);
+            }
+            if ($("#job_skills_3").val() != "") {
+                user_data.job_skills_3 = $("#job_skills_3").val();
+                console.log(user_data.job_skills_3);
+            }
+
+            /***************Page_7*****************/
+
+            if ($("#education").val() != "") {
+                user_data.education = $("#education").val();
+                console.log(user_data.education);
+            }
+            if ($("#edu_highest_grade").val() != "") {
+                user_data.edu_highest_grade = $("#edu_highest_grade").val();
+                console.log(user_data.edu_highest_grade);
+            }
+
+            /***************Page_8*****************/
+
+            if ($("#school_name_1").val() != "") {
+                user_data.school_name_1 = $("#school_name_1").val();
+                console.log(user_data.school_name_1);
+            }
+            if ($("#school_grad_date_1").val() != "") {
+                user_data.school_grad_date_1 = $("#school_grad_date_1").val();
+                console.log(user_data.school_grad_date_1);
+            }
+            if ($("#school_major_1").val() != "") {
+                user_data.school_major_1 = $("#school_major_1").val();
+                console.log(user_data.school_major_1);
+            }
+
+            /***************Page_9*****************/
 
 $(document).ready(function () {
     console.log(`app.js ready!`);

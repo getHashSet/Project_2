@@ -11,8 +11,8 @@ module.exports = app => {
   // this is all the password routes
   // get all users
   app.get("/users", function(req, res) {
-    console.log(db.nextStepResume_db);
-    db.nextStepResume_db.getAllUsers().then(user => res.json(user));
+    console.log(db.User_Login);
+    db.User_Logins.getAllUsers().then(user => res.json(user));
   });
 
   // protected route
@@ -28,24 +28,24 @@ module.exports = app => {
 
   // register route
   app.post("/user_login", function(req, res) {
-    const userPin = req.body.password;
-    const userPassword = req.body.user_email;
-    console.log(userPin, userPassword);
+    const userPassword = req.body.password;
+    const userName = req.body.user_email;
+    console.log(userName, userPassword);
     db.User_Login.create({
-      pin: userPin,
+      userName: userName,
       password: userPassword
     }).then(user => res.json({ user, msg: "account created successfully" }));
   });
 
   //login route
-  app.post("/resume", async function(req, res) {
-    const { pin, password } = req.body;
-    if (password && pin) {
-      let user = await getUser({ pin: userPin });
+  app.post("/protected", async function(req, res) {
+    const { userName, password } = req.body;
+    if (password && userName) {
+      let user = await getUser({ password: userPassword });
       if (!user) {
         res.status(401).json({ message: "No such user found" });
       }
-      if (user.userPassword === password) {
+      if (user.password === userPassword) {
         // from now on we"ll identify the user by the id and the id is the
         // only personalized value that goes into our token
         let payload = { id: user.id };
@@ -57,9 +57,9 @@ module.exports = app => {
     }
   });
 
-  let strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
-    console.log("payload received", jwt_payload);
-    let user = getUser({ id: jwt_payload.id });
+  let strategy = new JwtStrategy(jwtOptions, function(User_Login, next) {
+    console.log("payload received", User_Login);
+    let user = getUser({ id: User_Login.id });
     if (user) {
       next(null, user);
     } else {
@@ -68,6 +68,13 @@ module.exports = app => {
   });
   // use the strategy
   passport.use(strategy);
+  app.get(
+    "/protected",
+    passport.authenticate("jwt", { session: false }),
+    function(req, res) {
+      res.json("Success! You can now see this without a token.");
+    }
+  );
   // Testing Only Remove before we publish
   app.post("/testing/123", function(req, res) {
     db.User_Data.create(req.body).then(function(returnThis) {
@@ -92,12 +99,4 @@ module.exports = app => {
       res.json(dbResult);
     });
   });
-
-  app.get(
-    "/protected",
-    passport.authenticate("jwt", { session: false }),
-    function(req, res) {
-      res.json("Success! You can now see this without a token.");
-    }
-  );
 };
