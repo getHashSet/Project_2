@@ -348,6 +348,7 @@ ion-icons {
 
 
 	section {
+
 		margin: 0;
 		padding: 1em;
 		.resume_frame {
@@ -356,22 +357,114 @@ ion-icons {
 			display: flex;
 			flex-wrap: wrap;
 			position: relative;
+			overflow: hidden;
 
 			.res_top_bar {
 				width: 100%;
 				height: 25%;
-				background-color: $blue;
+				background-color: $highlightDark;
+				color: #fff;
+				position: relative;
+
+				h1 {
+					width: 100%;
+					font-weight: 700;
+					font-size: 1.5em;
+					position: absolute;
+					text-align: center;
+					top: 40%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				h2 {
+					width: 100%;
+					font-weight: 500;
+					font-size: .8em;
+					position: absolute;
+					text-align: center;
+					left: 50%;
+					top: 60%;
+					transform: translate(-50%, -50%);
+				}
+
+				div {
+					font-size: .5em;
+					position: absolute;
+					bottom: 3px;
+					left: 0;
+					width: 100%;
+					text-align: center;
+				}
 			}
 
 			.res_left_field {
 				height: 75%;
 				width: 30%;
-				background-color: rgba($blue, .4);
+				background-color: #fab1a0;
+				font-weight: 700;
+				padding: .5em;
+
+				ul {
+					font-weight: 400;
+
+					li {
+						margin: .25em .25em;
+					}
+				}
 			}
 
 			.res_right_field {
-				height: 75%;
-				width: 70%;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				height: 70%;
+				width: 65%;
+				padding: 0 1em 1em 0;
+
+				#summary {
+					span {
+						font-weight: 700;
+						padding: .5em 0;
+					}
+
+					p {
+						font-weight: 400;
+						font-size: .8em;
+					}
+				}
+
+				#work_history {
+					margin: 1em 0;
+					span {
+						font-weight: 700;
+						padding: .5em 0;
+					}
+
+					.job_wrap {
+						margin: .5em 0;
+						font-weight: 400;
+						font-size: .8em;
+						position: relative;
+
+						.company_name {
+							font-weight: 700;
+						}
+
+						.job_title {
+							font-size: .6em;
+						}
+
+						.job_end {
+							margin-right: 1em;
+							position: absolute;
+							right: 0;
+							top: 0;
+							font-size: .6em;
+						}
+						
+					}
+				}
 			}
 		}
 	}
@@ -404,7 +497,7 @@ ion-icons {
 	color: $snow;
 	outline-offset: 1em;
 	background-color: $pink;
-	outline: 1em solid $pink;
+	outline: .5em solid $pink;
 	margin: 1em auto;
 	transition: transform 1s;
 	
@@ -436,8 +529,11 @@ ion-icons {
 		top: 0;
 		left: 0;
 		margin: 1em;
+		width: 92%;
 
 		p {
+			border-bottom: 1px solid #fff;
+			width: 100%;
 			user-select: none;
 			margin-left: 1.5em;
 			font-family: $mainFont;
@@ -538,7 +634,7 @@ ion-icons {
 			border: 1px solid $snow;
 			padding: 3px;
 			border-radius: 20%;
-			background-color: $purple;
+			background-color: $highlightDark;
 		}
 
 		ion-icon:hover {
@@ -644,6 +740,26 @@ ion-icons {
 		z-index: 99;
 		opacity: 1;
 		transform: translateY(5%);
+		padding: 2em;
+		overflow: hidden;
+
+		h3 {
+			font-weight: 900;
+		}
+
+		h2 {
+			font-size: 2em;
+			font-weight: 700;
+			border-bottom: 1px solid #fff;
+			width: 100%;
+			padding: .5em 0;
+			margin-bottom: .5em;
+		}
+
+		p {
+			font-weight: 200;
+			font-size: 1.5em;
+		}
 
 		span {
 			position: absolute;
@@ -652,6 +768,7 @@ ion-icons {
 			padding: .5em;
 			cursor: pointer;
 			transition: transform .3s;
+
 
 			ion-icon {
 				font-size: 4em;
