@@ -628,6 +628,10 @@ ion-icons {
 		min-width: 64px;
 		justify-content: start;
 		
+		a {
+			color: $snow;
+		}
+
 		ion-icon {
 			margin: .5em .2em .2em .2em;
 			font-size: 2em;

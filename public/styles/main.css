@@ -596,6 +596,8 @@ ion-icons {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start; }
+    .edit_menu .tools a {
+      color: #ecf0f1; }
     .edit_menu .tools ion-icon {
       margin: .5em .2em .2em .2em;
       font-size: 2em;
