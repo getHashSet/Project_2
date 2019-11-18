@@ -1,3 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,700,900&display=swap");
 .resume_update_window_root {
   width: 96%;
   height: 80%; }
+
+.resume_section .resume_frame {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8); }
+
+.index_ {
+  background-size: auto 100%; }
+  .index_ section {
+    font-size: 1.5em; }
+  .index_ section:last-child {
+    font-size: 2em; }
+    .index_ section:last-child ul li {
+      padding: .5em;
+      margin: .4em 0; }
+    .index_ section:last-child div span input {
+      margin: .25em 0;
+      width: 90%; }
+
+.questions_ .card-body h1 {
+  font-size: 3.5em; }
+  .questions_ .card-body h1 span {
+    margin: .5em 0; }
+
+.questions_ .card-body .school_in_summer_time form {
+  width: 98%; }
+  .questions_ .card-body .school_in_summer_time form input {
+    width: 98%; }
+
+.nav_top {
+  margin-top: 0; }
+
+.full_resume {
+  background-position: center center; }
+  .full_resume .res_ .edit_menu {
+    margin: 0; }
+
+.edit_menu {
+  position: relative;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  left: 0;
+  top: 0; }
+  .edit_menu .min_max {
+    display: none; }
