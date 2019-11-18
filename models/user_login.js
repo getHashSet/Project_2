@@ -11,6 +11,10 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    user_email: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
   return user_logins;

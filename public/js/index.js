@@ -1,3 +1,5 @@
+//import { getHeapSpaceStatistics } from "v8";
+
 /* eslint-disable camelcase */
 // // Get references to page elements
 // var $exampleText = $("#example-text");
@@ -113,14 +115,39 @@ var questionsBtnClick = function() {
     method: "POST",
     data: userLogins
   }).then(function(data) {
-    window.location = "//question";
+    window.location = "/question";
   });
 };
 
 var resumeBtnClick = function() {
+  console.log("LogIn clicked.");
   event.preventDefault();
   // console.log("resume");
-  window.location = "/resume";
+  userLogins.user_email = $("#user").val();
+  userLogins.password = $("#passwd").val();
+
+  console.log(userLogins.user_email)
+  // this call is not returning correctly.
+
+  if (userLogins.user_email.length < 4) {
+
+    console.log("You must enter information first.");
+  
+  } else {
+    //post call is not working. launching to resume for demo day.
+    window.location = "/resume";
+
+  }
+
+  $.ajax({
+    url: "/protected",
+    method: "POST",
+    data: userLogins
+  }).then(function(data) {
+    window.location = "/resume";
+    // res.json(data);
+    console.log("we work");
+  });
 };
 
 var homeBtnClick = function() {
@@ -155,3 +182,53 @@ $questionBtn.on("click", questionsBtnClick);
 $resumeBtn.on("click", resumeBtnClick);
 $homeBtn.on("click", homeBtnClick);
 $saveBtn.on("click", saveBtnClick);
+
+$(document).ready(function(){
+
+  // get all the objects we will be moving.
+  let nextKeyWord = $("#next");
+  let step_s = $("#step_s");
+  let step_t = $("#step_t");
+  let step_e = $("#step_e");
+  let step_p = $("#step_p");
+  let resume_r = $("#resume_r");
+  let resume_e1 = $("#resume_e1");
+  let resume_s = $("#resume_s");
+  let resume_u = $("#resume_u");
+  let resume_m = $("#resume_m");
+  let resume_e2 = $("#resume_e2");
+
+  let start_btn = $("#start_button");
+  let about_btn = $("#about_button");
+
+  const tl = gsap.timeline();
+
+  tl.to(nextKeyWord, {duration: 1, x: 0, opacity: 1}, 1);
+
+  tl.to(step_s, {duration: 1, x:0,  y: 0, opacity: 1}, 1);
+  tl.to(step_t, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(step_e, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(step_p, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(resume_r, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(resume_e1, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(resume_s, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(resume_u, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(resume_m, {duration: 1, x:0, y:0, opacity: 1}, 1);
+  tl.to(resume_e2, {duration: 1, x:0, y:0, opacity: 1}, 1);
+
+  tl.to(start_btn, {duration: .5, x:0, y:0, opacity: 1}, 2);
+  //tl.to(about_btn, {duration: .5, x:0, y:0, opacity: 1}, 2.5);
+
+
+
+  start_btn.click(function(){
+    let log_in_menu = $("#log_in_menu");
+
+    $("#start_menu").attr("style", "display: none");
+    $("#log_in_menu").attr("style", "display: flex");
+    tl.to($("#log_in_menu"), {duration: .3, opacity: 1});
+    // tl.to($("#start_menu"), {duration: 1, opacity: 0}, .1);
+
+  });
+
+});
