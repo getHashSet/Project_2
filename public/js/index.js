@@ -115,14 +115,24 @@ var questionsBtnClick = function() {
     method: "POST",
     data: userLogins
   }).then(function(data) {
-    window.location = "//question";
+    window.location = "/question";
   });
 };
 
 var resumeBtnClick = function() {
   event.preventDefault();
   // console.log("resume");
-  window.location = "/resume";
+  userLogins.user_email = $("#user").val();
+  userLogins.password = $("#passwd").val();
+  $.ajax({
+    url: "/protected",
+    method: "POST",
+    data: userLogins
+  }).then(function(data) {
+    window.location = "/resume";
+    // res.json(data);
+    console.log("we work");
+  });
 };
 
 var homeBtnClick = function() {
@@ -158,6 +168,7 @@ $resumeBtn.on("click", resumeBtnClick);
 $homeBtn.on("click", homeBtnClick);
 $saveBtn.on("click", saveBtnClick);
 
+<<<<<<< HEAD
 $(document).ready(function(){
 
   // get all the objects we will be moving.
@@ -207,3 +218,11 @@ $(document).ready(function(){
   });
 
 });
+=======
+addEventListener("keyup", event => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    resumeBtnClick();
+  }
+});
+>>>>>>> 00ede2f4251de043a91e40c2ef09ecd76b030e56
