@@ -124,6 +124,9 @@ var resumeBtnClick = function() {
   // console.log("resume");
   userLogins.user_email = $("#user").val();
   userLogins.password = $("#passwd").val();
+
+  // this call is not returning correctly.
+  
   $.ajax({
     url: "/protected",
     method: "POST",
