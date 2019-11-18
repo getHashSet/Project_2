@@ -267,6 +267,12 @@ ion-icons {
 				transition: transform .2s;
 			}
 
+			li:focus,
+			#start_button:focus,
+			#about_button:focus {
+				outline: .25em solid $pink;
+			}
+
 		}
 
 		div {
@@ -321,6 +327,7 @@ ion-icons {
 
 		}
 	}
+
 }
 
 

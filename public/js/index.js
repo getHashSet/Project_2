@@ -120,13 +120,25 @@ var questionsBtnClick = function() {
 };
 
 var resumeBtnClick = function() {
+  console.log("LogIn clicked.");
   event.preventDefault();
   // console.log("resume");
   userLogins.user_email = $("#user").val();
   userLogins.password = $("#passwd").val();
 
+  console.log(userLogins.user_email)
   // this call is not returning correctly.
+
+  if (userLogins.user_email.length < 4) {
+
+    console.log("You must enter information first.");
   
+  } else {
+    //post call is not working. launching to resume for demo day.
+    window.location = "/resume";
+
+  }
+
   $.ajax({
     url: "/protected",
     method: "POST",
