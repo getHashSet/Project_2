@@ -21,7 +21,7 @@
 
     <section class="resume_section">
       <div class="arrow_left"><span>&lt;</span></div>
-      <div class="resume_frame">
+      <div id="resume" class="resume_frame">
         <div class="res_top_bar">
           <h1>Matthew Carpenter</h1>
           <h2>Front-End Web Dev</h2>
@@ -52,7 +52,8 @@
         <div class="res_right_field">
           <div id="summary">
             <span>Summary</span>
-            <p>My name is Matthew and I like to Party. Mollitia aperiam, fugit deserunt iste impedit ex dolor animi? </p>
+            <p>My name is Matthew and I like to Party. Mollitia aperiam, fugit deserunt iste impedit ex dolor animi?
+            </p>
           </div>
           <div id="work_history">
             <span>Work History</span>
@@ -62,7 +63,8 @@
               <div class="company_name">Job</div>
               <div class="job_title">Title</div>
               <div class="job_end">Job End Date</div>
-              <div class="job_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quo similique consequatur aspernatur eos, id voluptas recusandae asperiores.</div>
+              <div class="job_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quo similique
+                consequatur aspernatur eos, id voluptas recusandae asperiores.</div>
 
             </div>
             <div class="job_wrap">
@@ -70,7 +72,8 @@
               <div class="company_name">Job</div>
               <div class="job_title">Title</div>
               <div class="job_end">Job End Date</div>
-              <div class="job_about">Mollitia aperiam, fugit deserunt iste impedit ex dolor animi? Nam debitis, magnam molestiae rem nihil eos voluptates voluptatibus maiores distinctio accusantium consectetur?</div>
+              <div class="job_about">Mollitia aperiam, fugit deserunt iste impedit ex dolor animi? Nam debitis, magnam
+                molestiae rem nihil eos voluptates voluptatibus maiores distinctio accusantium consectetur?</div>
 
             </div>
             <div class="job_wrap">
@@ -78,12 +81,25 @@
               <div class="company_name">Job</div>
               <div class="job_title">Title</div>
               <div class="job_end">Job End Date</div>
-              <div class="job_about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aperiam, fugit deserunt iste impedit ex dolor animi? </div>
+              <div class="job_about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aperiam, fugit
+                deserunt iste impedit ex dolor animi? </div>
 
             </div>
 
           </div>
         </div>
+      </div>
+      <div id="business_card" class="business_frame">
+
+        <div class="qr">
+          <img id="qr_code" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://linkedin.com/in/matthewcarpenter22" alt="qr-data">
+        </div>
+        <div class="texts">
+        <p>Let's Connect<span>Matthew Carpenter</span><span>555-1702</span></p>
+
+        </div>
+
+
       </div>
       <div class="arrow_right"><span>&gt;</span></div>
     </section>
@@ -103,13 +119,15 @@
 
       <div class="tools">
         <ion-icon name="ios-download" id="download"></ion-icon>
-        <a href="mailto:"><ion-icon name="ios-mail"></ion-icon></a>
+        <a href="mailto:">
+          <ion-icon name="ios-mail"></ion-icon>
+        </a>
         <ion-icon class="save_button" name="ios-save" title="save"></ion-icon>
         <ion-icon class="big_red_button" name="ios-heart"></ion-icon>
       </div>
 
       <div class="toolbox_frame">
-        <div class="resume_preview">
+        <div  id="back_to_resume"  class="resume_preview">
           <div class="res_top_bar">
 
           </div>
@@ -135,18 +153,18 @@
 
           </div>
         </div>
-        <div class="resume_preview locked">
-          <div class="resume_preview">
-            <div class="res_top_bar">
+        <div class="resume_preview_locked">
 
+          <div id="card">
+            <div class="box_1">
+              <div class="black_box">
+
+              </div>
             </div>
-            <div class="res_left_field">
-
+            <div class="box_2">
+              <div class="grey_box"></div>
+              <div class="grey_box2"></div>
             </div>
-            <div class="res_right_field">
-
-            </div>
-
           </div>
         </div>
         {{!-- <div class="business_cards_preview">business cards</div> --}}

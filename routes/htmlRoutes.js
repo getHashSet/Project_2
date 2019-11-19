@@ -14,6 +14,10 @@ module.exports = function(app) {
     res.render("questions");
   });
 
+  // app.get("/resume", function(req, res) {
+  //   res.render("resume");
+  // });
+
   app.get("/resume", function(req, res) {
     res.render("resume");
   });
@@ -29,6 +33,11 @@ module.exports = function(app) {
   app.get("/resume3", function(req, res) {
     res.render("resume3");
   });
+
+  app.get("/demo", function(req, res){
+    res.render("demo");
+  });
+
   app.get("/business", function(req, res) {
     res.render("businessCards");
   });

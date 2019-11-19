@@ -134,11 +134,7 @@ var resumeBtnClick = function() {
     console.log("You must enter information first.");
   
   } else {
-    //post call is not working. launching to resume for demo day.
-    window.location = "/resume";
-
-  }
-
+    
   $.ajax({
     url: "/protected",
     method: "POST",
@@ -148,6 +144,9 @@ var resumeBtnClick = function() {
     // res.json(data);
     console.log("we work");
   });
+
+  }
+
 };
 
 var homeBtnClick = function() {

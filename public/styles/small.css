@@ -33,6 +33,10 @@
 
 .nav_top {
   margin-top: 0; }
+  .nav_top nav_left span input {
+    padding: 1.5em 0 0 0; }
+  .nav_top nav_left span .get_user_data {
+    padding: 1em 0 0 0; }
 
 .full_resume {
   background-position: center center; }
@@ -45,6 +49,26 @@
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   left: 0;
-  top: 0; }
+  top: 0;
+  width: 80%;
+  margin-bottom: 3em; }
   .edit_menu .min_max {
     display: none; }
+
+.resume_update_window_root {
+  height: auto; }
+  .resume_update_window_root .update_window_floating_child {
+    outline: 0.5em solid #f19066;
+    outline-offset: .5em;
+    font-size: .7em;
+    height: 100%; }
+
+.haze {
+  height: 230vh;
+  width: 200vw; }
+
+.res_ {
+  overflow-x: hidden; }
+
+#card {
+  margin: 1em 0; }

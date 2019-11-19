@@ -57,4 +57,21 @@ console.log(`app.js ready!`);
         window.location = 'mailto:'+ email + '?subject=' + subject + '&body=' +   emailBody;;
     });
 
+
+    $("#card").click(function(){
+        $("#resume").css("display", "none");
+        $("#business_card").css("display", "flex");
+    });
+
+    $("#back_to_resume").click(function(){
+        $("#resume").css("display", "flex");
+        $("#business_card").css("display", "none");
+    });
+
+    $("#qr_code").click(function(){
+        let qr_new = prompt("What do you want the QR to link to?", "https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://linkedin.com/in/matthewcarpenter22");
+        console.log(qr_new);
+        $("#qr_code").attr("src", `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qr_new}`);
+    });
+
 });

@@ -309,6 +309,34 @@ $(document).ready(function () {
 
     var objJson = JSON.stringify(user_data);
     console.log(objJson);
+
+    // make a random hash
+    let randomNumber = Math.floor(Math.random()*500) +1;
+    let randomNumber2 = Math.floor(Math.random()*500) +1;
+    let randomAlpha = Math.floor(Math.random() *25 );
+    let randomAlpha2 = Math.floor(Math.random() *23 );
+    let randomAlpha3 = Math.floor(Math.random() *22 );
+    let Alpha = "abcdefghijklmnopqrstuvwxyz";
+
+    if (user_data.key == null || user_data.key == ""){
+      user_data.key = randomNumber + Alpha[randomAlpha] + randomNumber2 + Alpha[randomAlpha2] + Alpha[randomAlpha3]
+    };
+ 
+    console.log(user_data.key);
+
+    // check to make sure an email was entered into the mix
+    if (user_data.user_email != null && user_data.user_email.length > 4 && user_data.user_email.indexOf("@") != -1 && user_data.user_email.indexOf(".") != -1) {
+
+      $.post("/testing/123", user_data)
+      .then(function (data) {
+        console.log(data);
+      });
+
+    } else {
+      //you need to enter an email.
+    }
+
+
     //}
   });
 
@@ -408,7 +436,9 @@ $(document).ready(function () {
 
   let nextButton = function () {
     event.preventDefault();
-    window.location = "/resume";
+
+      window.location = `/resume`;
+    
   };
 
 
