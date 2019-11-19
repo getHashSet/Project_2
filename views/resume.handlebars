@@ -201,10 +201,10 @@
 <script src="/js/index.js"></script>
 <script src="/js/resume_page.js"></script>
 {{!-- Adding jsPDF --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
-  integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
 
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 <script>
   //////////////////////////////////////////////////////////////////////////////
   // inline script for testing only. please add to resume.js when complete.
@@ -255,9 +255,9 @@
     }, 500);
 
 
-    $('#download').click(function () {
-      html2canvas(document.querySelector("#resume-content")).then(canvas => {
-
+$('#download').click(function () {
+      html2canvas(document.querySelector(".resume_frame")).then(canvas => {
+        
         var a = document.createElement('a');
         // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
         a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
