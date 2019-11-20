@@ -351,7 +351,7 @@ $(document).ready(function () {
     github: "getHashSet",
     about: "Software Engineer and Apple certified systems-technician with a focus on the end user experience. It is my passion to bring projects to life using technology. Certification in Full Stack Development from the University of Arizona and proficient with: API’s, JavaScript, C#, Content Delivery Networks, Node.js, and Git. Successfully trained and deployed multiple technician teams, and held a market wide trainer position with a focus on both adult learning and interpreting data analytics. My experiences have provided me the opportunity to put into practice; triaging techniques, problem solving, and learning on the fly while amplifying my soft skills. It is my mission to contribute to a team that develops the world's most cutting edge software.",
     quote: "I help people achieve their goals through technology.",
-    key: "HASHKEY123",
+    key: "LITSWD1701",
     job_skills_1: "Customer Service, Some IT stuff.",
     job_start_1: "2007",
     job_end_1: "2011",

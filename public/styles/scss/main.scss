@@ -384,6 +384,50 @@ ion-icons {
 					transform: translate(-50%, -50%);
 				}
 
+				.over_under {
+					width: 200px;
+					height: 20px;
+					background-color: #fff;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					z-index: 500;
+					display: flex;
+					outline: .5em solid #fff;
+					outline-offset: .5em;
+					flex-wrap: nowrap;
+
+					ion-icon {
+						color: $dark;
+						font-size: 2em;
+						transform: translateY(2px);
+					}
+
+					ion-icon:hover {
+						transform: translateY(1px);
+					}
+
+					ion-icon:active {
+						transform: translateY(4px);
+					}
+
+					span {
+						display: inline-block;
+						width: 20%;
+					}
+
+					input {
+						border: none;
+						line-height: 2em;
+						font-weight: 200;
+						font-size: 1.5em;
+						padding: 1em;
+						width: 80%;
+
+					}
+				}
+
 				h2 {
 					width: 100%;
 					font-weight: 500;
@@ -1138,4 +1182,12 @@ ion-icons {
 			}
 		}
 	}
+}
+
+#over_under {
+	display: none;
+}
+
+#yo_name:hover {
+	cursor: pointer;
 }

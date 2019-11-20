@@ -11,7 +11,7 @@ console.log(`app.js ready!`);
 
     /* ----- Code Start ----- */
 
-    let myKey = "HASHKEY123"
+    let myKey = "LITSWD1701"
 
     // test to see if we can post the object
     $(".big_red_button").click(function() {
@@ -23,15 +23,22 @@ console.log(`app.js ready!`);
         });
     });
 
+    $("#yo_name").click(function(){
+        $(".over_under").css("display", "flex");
+    });
+
+
     $(".save_button").click(function() {
 
-        let updatedValue = $(".update_field").val();
+        $(".over_under").css("display", "none");
+        
+        $("#yo_name").html($("#update_field").val());
+        console.log("Yaaasssqueeen.");
+        let updatedValue = $("#update_field").val();
 
         if (updatedValue.length > 64){
             alert("that's to long.");
         } else {
-            
-            console.log("stuffs n thingz");
 
             $.ajax({
                 method: "PUT",

@@ -357,6 +357,48 @@ ion-icons {
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+        .res_ section .resume_frame .res_top_bar .over_under {
+          width: 200px;
+          height: 20px;
+          background-color: #fff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          z-index: 500;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          outline: .5em solid #fff;
+          outline-offset: .5em;
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+          .res_ section .resume_frame .res_top_bar .over_under ion-icon {
+            color: #2d3436;
+            font-size: 2em;
+            -webkit-transform: translateY(2px);
+            -ms-transform: translateY(2px);
+            transform: translateY(2px); }
+          .res_ section .resume_frame .res_top_bar .over_under ion-icon:hover {
+            -webkit-transform: translateY(1px);
+            -ms-transform: translateY(1px);
+            transform: translateY(1px); }
+          .res_ section .resume_frame .res_top_bar .over_under ion-icon:active {
+            -webkit-transform: translateY(4px);
+            -ms-transform: translateY(4px);
+            transform: translateY(4px); }
+          .res_ section .resume_frame .res_top_bar .over_under span {
+            display: inline-block;
+            width: 20%; }
+          .res_ section .resume_frame .res_top_bar .over_under input {
+            border: none;
+            line-height: 2em;
+            font-weight: 200;
+            font-size: 1.5em;
+            padding: 1em;
+            width: 80%; }
         .res_ section .resume_frame .res_top_bar h2 {
           width: 100%;
           font-weight: 500;
@@ -1107,3 +1149,9 @@ ion-icons {
       #business_card .texts p span {
         font-weight: 400;
         display: block; }
+
+#over_under {
+  display: none; }
+
+#yo_name:hover {
+  cursor: pointer; }
